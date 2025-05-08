@@ -1,4 +1,8 @@
 {
   "name": "RepackApp",
-  "displayName": "RepackApp"
+  "displayName": "RepackApp",
+  "localChunks": ["src_modules_LocalModule_LocalModule_tsx"],
+  "remoteChunks": ["localModule", "remoteModule"],
+  "remoteChunkPort": 4999,
+  "remoteChunkUrl": "http://192.168.100.65"
 }
