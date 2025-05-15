@@ -21,6 +21,11 @@ const appJson = loadJSON('./app.json');
 export default {
   context: __dirname,
   entry: './index.js',
+  optimization: {
+    /* ... */
+
+    chunkIds: "named",
+  },
   resolve: {
     ...Repack.getResolveOptions(),
     // extensions: ['.tsx', '.ts', '.jsx', '.js'],
@@ -42,7 +47,7 @@ export default {
         include: appJson.remoteChunks,
         test: /.*/,
         type: "remote",
-        outputPath: path.join("build/output", "remote"), // Default path
+        outputPath: path.join("build/output", "remotes/promo"), // Default path
       },
     ],
   })],
