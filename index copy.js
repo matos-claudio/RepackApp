@@ -34,7 +34,9 @@ ScriptManager.shared.addResolver(async scriptId => {
   console.log(`URL: `, `http://192.168.100.65:4002/promo-module/${scriptId}`);
 
   return {
-    url: `http://192.168.100.65:4002/promo-module/${scriptId}`,
+  
+    url: `http://10.190.0.86:4002/promo-module/${scriptId}`,
+    // url: `http://192.168.100.65:4002/promo-module/${scriptId}`,
     cache: false,
     // url: `http://192.168.100.65:4002/home-module/${scriptId}`,
   };

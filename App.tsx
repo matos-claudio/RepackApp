@@ -29,7 +29,7 @@ const App = () => {
   useEffect(() => {
     MiniAppManager.addMiniApp(
       'remotePromo',
-      'http://192.168.100.65:4002/promo-module/remotePromo'
+      'http://10.190.0.86:4002/promo-module/remotePromo'
     );
   }, []);
 
@@ -48,7 +48,8 @@ const App = () => {
   const installMiniApp = async () => {
     await MiniAppManager.addMiniApp(
       'remotePromo',
-      'http://192.168.100.65:4002/promo-module/remotePromo'
+      'http://10.190.0.86:4002/promo-module/remotePromo'
+      // 'http://192.168.100.65:4002/promo-module/remotePromo'
     );
     await ScriptManager.shared.loadScript('remotePromo');
     await checkIfInstalled();
@@ -95,7 +96,6 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={'dark-content'}/>
-      {/* <StatusBar barStyle={'light-content'} /> */}
       <FlatList
         data={MINI_APPS}
         numColumns={2}
